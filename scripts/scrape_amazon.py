@@ -10,7 +10,7 @@ import time
 from include.config import BASE_URL, HEADERS, QUERY, DELAY
 from lib.amazon_parser import parse_products
 
-output_file = "data\raw\dt=2025-12-23\amazon_oil.csv"
+output_file = "data/raw/dt=2025-12-23/amazon_oil.csv"
 
 with open(output_file, "w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(
