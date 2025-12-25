@@ -1,124 +1,58 @@
-```markdown
-# Amazon Cooking Oil Scraper
+# 🛢️ Amazon Cooking Oil Scraper
 
-## Project Overview
-This project demonstrates a basic web scraping and data processing pipeline using Python.  
-The scraper collects product data for **cooking oil** from Amazon search results and stores it in a structured CSV format for further analysis.
+A simple Python scraper that collects product data for cooking oil from Amazon search results.  
+This project stores data in structured CSV format for further analysis.
 
 ---
 
-## Project Structure
-```
+## 📌 Project Overview
 
-amazon-scraper/
-├─ data/
-│  └─ raw/
-│     └─ dt=YYYY-MM-DD/
-│        └─ amazon_oil.csv
-├─ include/
-│  └─ config.py
-├─ lib/
-│  └─ amazon_parser.py
-├─ scripts/
-│  └─ scrape_amazon.py
-├─ .gitignore
-├─ requirements.txt
-└─ README.md
+This scraper is designed to:
 
-
-````
-
-- `data/raw/` → stores raw CSV files partitioned by date  
-- `include/config.py` → contains URL, query, headers, delay  
-- `scripts/scrape_amazon.py` → main scraper script  
+- Collect product titles, ratings, and review counts from Amazon.  
+- Partition raw data by date.  
+- Provide a clean dataset for portfolio or educational purposes.
 
 ---
 
-## Configuration
-Edit `include/config.py` to set your scraping parameters:
+## 🛠️ Tech Stack
 
-```python
-BASE_URL = "https://www.amazon.com/s"
-QUERY = "cooking oil"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0",
-    "Accept-Language": "en-US,en;q=0.9"
-}
-DELAY = 2  # seconds between requests
-````
+- **Language:** Python 3  
+- **Libraries:**  
+  - `requests` – HTTP requests  
+  - `BeautifulSoup` – HTML parsing  
+  - `pandas` – Optional CSV handling  
+- **Tested on:** Windows 10 / Linux with Python 3.10+
 
 ---
 
-## Dependencies
+## 🎯 Features
 
-Install required Python packages:
-
-```bash
-pip install requests beautifulsoup4 pandas
-```
+- Scrapes Amazon search results for cooking oil.  
+- Saves raw data in CSV format, partitioned by scrape date.  
+- Structured columns: `title`, `rating`, `review_count`, `scrape_date`, `source`.
 
 ---
 
-## How to Run
+## ▶️ How to Run
 
-```bash
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/emfarhand/amazon-scraper.git
+   cd amazon-scraper
+Install dependencies:
+
+bash
+Salin kode
+pip install -r requirements.txt
+Run scraper:
+
+bash
+Salin kode
 python scripts/scrape_amazon.py
-```
+Output CSV:
+data/raw/dt=YYYY-MM-DD/amazon_oil.csv
 
-**Output:**
-`data/raw/dt=YYYY-MM-DD/amazon_oil.csv`
-
----
-
-## Output CSV
-
-| Column       | Description          |
-| ------------ | -------------------- |
-| title        | Product title        |
-| rating       | Product rating       |
-| review_count | Number of reviews    |
-
----
-
-## Data Pipeline Flow
-
-```
-Amazon Search Page
-        |
-        v
-HTTP Request (requests)
-        |
-        v
-HTML Parsing (BeautifulSoup)
-        |
-        v
-Raw CSV Output
-```
-
----
-
-## Limitations
-
-* The scraper does **not handle CAPTCHA or IP blocking**
-* Data availability depends on **Amazon page structure**
-* Only suitable for **educational and portfolio purposes**
-
----
-
-## Learning Objectives
-
-* Basic web scraping with requests and BeautifulSoup
-* Partitioning raw data by date
-* Generating structured CSVs for downstream analysis
-* Creating simple, maintainable Python project structure
-
----
-
-## Future Improvements
-
-* Add a cleaning layer for normalized/typed data
-* Create a curated analytics layer (e.g., top products by review_count)
-* Add error logging and retry mechanisms
-* Expand to multiple pages or multiple products
-
-```
+📬 Contact
+Email: farhanlangsa003@gmail.com
+LinkedIn: linkedin.com/in/emfarhand
