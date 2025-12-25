@@ -1,5 +1,3 @@
----
-
 ```markdown
 # Amazon Cooking Oil Scraper
 
