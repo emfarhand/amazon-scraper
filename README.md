@@ -10,16 +10,21 @@ The scraper collects product data for **cooking oil** from Amazon search results
 ## Project Structure
 ```
 
-ecommerce-analyst/
+amazon-scraper/
 ├─ data/
 │  └─ raw/
 │     └─ dt=YYYY-MM-DD/
 │        └─ amazon_oil.csv
 ├─ include/
 │  └─ config.py
+├─ lib/
+│  └─ amazon_parser.py
 ├─ scripts/
 │  └─ scrape_amazon.py
+├─ .gitignore
+├─ requirements.txt
 └─ README.md
+
 
 ````
 
