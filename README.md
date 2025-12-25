@@ -72,8 +72,6 @@ python scripts/scrape_amazon.py
 | title        | Product title        |
 | rating       | Product rating       |
 | review_count | Number of reviews    |
-| scrape_date  | Date of scraping     |
-| source       | Data source (Amazon) |
 
 ---
 
